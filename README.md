@@ -1,3 +1,20 @@
+# Example installing from this fork with CUDA support (PowerShell)
+
+```powershell
+$env:CMAKE_ARGS = "-DGGML_CUDA=on"
+pip install git+https://github.com/bot08/llama-cpp-python.git@main
+```
+
+To force a clean rebuild:
+
+```powershell
+$env:CMAKE_ARGS = "-DGGML_CUDA=on"
+pip install --upgrade --force-reinstall --no-cache-dir `
+  git+https://github.com/bot08/llama-cpp-python.git@main
+```
+
+---
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/abetlen/llama-cpp-python/main/docs/icon.svg" style="height: 5rem; width: 5rem">
 </p>
